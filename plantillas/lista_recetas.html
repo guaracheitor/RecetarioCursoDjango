@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang='es'>
+  <head>
+	<title>Lista de recetas de ejemplo</title>
+	<meta charset='utf-8'>
+  </head>
+  <style>
+    img { width:200px; }
+  </style>
+  <body>
+    <h1>Recetario de Recetas</h1>
+	{% for receta in recetas %}
+	<ul>
+	  <li><strong>{{receta.titulo}}</strong></li>
+	  <li>{{receta.ingredientes}}</li>
+	  <li>{{receta.preparacion}}</li>
+	  <img src='{{MEDIA_URL}}{{receta.imagen}}'>
+	</ul>
+	{% endfor %}
+	<a href="{{principal.lista_bebidas}}">bebidas</a>
+  </body>
+</html>
